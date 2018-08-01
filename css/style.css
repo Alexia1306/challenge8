@@ -1,3 +1,35 @@
-body{
-    
+main, header, footer {
+  max-width: 1300px;
+  margin: 0 auto;
 }
+
+.sectionImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "a b c d" "e e f f";
+}
+.sectionImg img {
+  width: 100%;
+  height: auto;
+}
+.sectionImg img:nth-child(1) {
+  grid-area: a;
+}
+.sectionImg img:nth-child(2) {
+  grid-area: b;
+}
+.sectionImg img:nth-child(3) {
+  grid-area: c;
+}
+.sectionImg img:nth-child(4) {
+  grid-area: d;
+}
+.sectionImg img:nth-child(5) {
+  grid-area: e;
+}
+.sectionImg img:nth-child(6) {
+  grid-area: f;
+}
+
+/*# sourceMappingURL=style.css.map */
