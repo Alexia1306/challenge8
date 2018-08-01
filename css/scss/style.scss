@@ -1,46 +1,92 @@
-main, header, footer {
+@import "color";
+
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+footer,
+header,
+main {
     max-width: 1300px;
     margin: 0 auto;
 }
-.sectionImg {
 
+.sectionImg {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr;
+    grid-template-areas: "a b c d" "e e f f";
 
-    grid-template-areas:
-    "a b c d"
-    "e e f f";
-    img{
+    img {
         width: 100%;
         height: auto;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             grid-area: a;
         }
+
         &:nth-child(2) {
             grid-area: b;
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
             grid-area: c;
         }
+
         &:nth-child(4) {
             grid-area: d;
         }
-        &:nth-child(5){
+
+        &:nth-child(5) {
             grid-area: e;
         }
+
         &:nth-child(6) {
             grid-area: f;
         }
     }
 }
-.mainArticle {
-
+.padding {
+    padding: 7rem;
 }
-.mainArticle .pink {
 
+.mainArticle {
+    @extend .padding;
+    background-color: $colorLight;
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+
+        >.card{
+            box-shadow: 0 0 50px rgb(205, 205, 205);
+            > i {
+                width: 100%;
+                text-align: center;
+                line-height: 2em;
+                font-size: 2.5rem;
+                color: $color2;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.mainArticlePink {
+    @extend .mainArticle;
+    background: $colorMain;
+    .cards > .card{
+        box-shadow: none;
+        background: $colorLight;
+    }
 }
 
 .sectionMore {
+    @extend .padding;
+    background-color: $colorLight;
 
 }

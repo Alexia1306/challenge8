@@ -1,35 +1,60 @@
-main, header, footer {
+body {
+  font-family: 'Rubik', sans-serif; }
+
+footer,
+header,
+main {
   max-width: 1300px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .sectionImg {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 2fr;
-  grid-template-areas: "a b c d" "e e f f";
-}
-.sectionImg img {
-  width: 100%;
-  height: auto;
-}
-.sectionImg img:nth-child(1) {
-  grid-area: a;
-}
-.sectionImg img:nth-child(2) {
-  grid-area: b;
-}
-.sectionImg img:nth-child(3) {
-  grid-area: c;
-}
-.sectionImg img:nth-child(4) {
-  grid-area: d;
-}
-.sectionImg img:nth-child(5) {
-  grid-area: e;
-}
-.sectionImg img:nth-child(6) {
-  grid-area: f;
-}
+  grid-template-areas: "a b c d" "e e f f"; }
+  .sectionImg img {
+    width: 100%;
+    height: auto; }
+    .sectionImg img:nth-child(1) {
+      grid-area: a; }
+    .sectionImg img:nth-child(2) {
+      grid-area: b; }
+    .sectionImg img:nth-child(3) {
+      grid-area: c; }
+    .sectionImg img:nth-child(4) {
+      grid-area: d; }
+    .sectionImg img:nth-child(5) {
+      grid-area: e; }
+    .sectionImg img:nth-child(6) {
+      grid-area: f; }
+
+.padding, .mainArticle, .mainArticlePink, .sectionMore {
+  padding: 7rem; }
+
+.mainArticle, .mainArticlePink {
+  background-color: #f1f1f1; }
+  .mainArticle .cards, .mainArticlePink .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem; }
+    .mainArticle .cards > .card, .mainArticlePink .cards > .card {
+      box-shadow: 0 0 50px #cdcdcd; }
+      .mainArticle .cards > .card > i, .mainArticlePink .cards > .card > i {
+        width: 100%;
+        text-align: center;
+        line-height: 2em;
+        font-size: 2.5rem;
+        color: #ff7676; }
+      .mainArticle .cards > .card img, .mainArticlePink .cards > .card img {
+        width: 100%; }
+
+.mainArticlePink {
+  background: linear-gradient(0.25turn, #f54ea2, #ff7676); }
+  .mainArticlePink .cards > .card {
+    box-shadow: none;
+    background: #f1f1f1; }
+
+.sectionMore {
+  background-color: #f1f1f1; }
 
 /*# sourceMappingURL=style.css.map */
